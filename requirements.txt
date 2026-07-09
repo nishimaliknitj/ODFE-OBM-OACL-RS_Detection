@@ -23,7 +23,7 @@ seaborn==0.13.2
 # Config / logging
 PyYAML==6.0.1
 tqdm==4.66.1
-tensorboard==2.14.0
+tensorboard==2.21.0
 wandb==0.16.3
 
 # Utilities
