@@ -1,0 +1,10 @@
+ODFE-OBM-OACL-RSDetection
+Copyright 2024 Nishi Madaan, Rahul Malik, Utsav Upadhyay, Alok Kumar, Satyabrata Roy, Umashankar Rawat
+
+This product includes software developed for the research paper:
+"Optimization-Driven Feature Learning for Long-Tailed Object Detection
+in Optical Remote Sensing Imagery."
+
+Baseline detector design inspired by Ultralytics YOLOv8 (AGPL-3.0) —
+if you deploy this code commercially with the Ultralytics backbone,
+review Ultralytics' licensing terms separately.

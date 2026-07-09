@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ODFE-OBM-OACL: Optimization-Driven Feature Learning for Long-Tailed Object Detection in Optical Remote Sensing Imagery"
+type: software
+authors:
+  - family-names: "Madaan"
+    given-names: "Nishi"
+    affiliation: "Galgotias University"
+  - family-names: "Malik"
+    given-names: "Rahul"
+    affiliation: "Galgotias University"
+  - family-names: "Upadhyay"
+    given-names: "Utsav"
+    affiliation: "Galgotias University"
+  - family-names: "Kumar"
+    given-names: "Alok"
+    affiliation: "Galgotias University"
+  - family-names: "Roy"
+    given-names: "Satyabrata"
+    affiliation: "Manipal University Jaipur"
+  - family-names: "Rawat"
+    given-names: "Umashankar"
+    affiliation: "Manipal University Jaipur"
+repository-code: "https://github.com/nishimaliknitj/ODFE-OBM-OACL-RSDetection"
+license: MIT
+version: 1.0.0
+date-released: "2024-01-01"
+keywords:
+  - remote sensing
+  - object detection
+  - long-tailed learning
+  - data augmentation
+  - optimization difficulty

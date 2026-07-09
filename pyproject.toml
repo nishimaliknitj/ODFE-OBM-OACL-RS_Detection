@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "odfe-obm-oacl"
+version = "1.0.0"
+description = "Optimization-Driven Feature Learning for Long-Tailed Object Detection in Optical Remote Sensing Imagery"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Nishi Madaan" },
+    { name = "Rahul Malik", email = "rahul.malik@galgotiasuniversity.edu.in" },
+    { name = "Utsav Upadhyay" },
+    { name = "Alok Kumar" },
+    { name = "Satyabrata Roy" },
+    { name = "Umashankar Rawat" },
+]
+keywords = ["remote sensing", "object detection", "long-tailed learning", "deep learning"]
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
+exclude = [".git", "__pycache__", "build", "dist"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true

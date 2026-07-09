@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: odfe-obm-oacl:latest
+    container_name: odfe_train
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0
+    volumes:
+      - ./data:/workspace/data
+      - ./checkpoints:/workspace/checkpoints
+      - ./logs:/workspace/logs
+      - ./results:/workspace/results
+      - ./configs:/workspace/configs
+    command: ["python", "src/train.py", "--config", "configs/dior.yaml"]
+    shm_size: "8gb"
+
+  tensorboard:
+    image: odfe-obm-oacl:latest
+    container_name: odfe_tensorboard
+    depends_on:
+      - train
+    volumes:
+      - ./logs:/workspace/logs
+    ports:
+      - "6006:6006"
+    command: ["tensorboard", "--logdir", "/workspace/logs", "--host", "0.0.0.0"]
+
+  eval:
+    image: odfe-obm-oacl:latest
+    container_name: odfe_eval
+    runtime: nvidia
+    volumes:
+      - ./data:/workspace/data
+      - ./checkpoints:/workspace/checkpoints
+      - ./results:/workspace/results
+    command: ["python", "src/test.py", "--config", "configs/dior.yaml", "--weights", "checkpoints/dior_full_best.pt"]

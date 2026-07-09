@@ -1,0 +1,17 @@
+.git
+.github
+__pycache__
+*.pyc
+venv/
+.venv/
+data/
+weights/*
+checkpoints/*
+logs/*
+outputs/*
+results/*
+*.zip
+*.tar.gz
+.pytest_cache
+.mypy_cache
+notebooks/.ipynb_checkpoints

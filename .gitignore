@@ -1,0 +1,93 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+*.egg
+
+# ---- Virtual environments ----
+venv/
+env/
+ENV/
+.venv/
+conda-meta/
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---- Editors / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Deep learning artifacts ----
+*.pt
+*.pth
+*.onnx
+*.engine
+*.pb
+*.h5
+*.ckpt
+weights/*
+!weights/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+
+# ---- Datasets (large, download separately) ----
+data/DIOR/*
+data/DOTA/*
+data/FAIR1M/*
+!data/DIOR/.gitkeep
+!data/DOTA/.gitkeep
+!data/FAIR1M/.gitkeep
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# ---- Logs / outputs ----
+logs/*
+!logs/.gitkeep
+outputs/*
+!outputs/.gitkeep
+results/*
+!results/.gitkeep
+runs/
+wandb/
+tensorboard/
+*.log
+*.csv.lock
+
+# ---- LaTeX build artifacts ----
+paper/latex/*.aux
+paper/latex/*.bbl
+paper/latex/*.blg
+paper/latex/*.log
+paper/latex/*.out
+paper/latex/*.synctex.gz
+paper/latex/*.fdb_latexmk
+paper/latex/*.fls
+
+# ---- Env / secrets ----
+.env
+*.key
+*.pem
+
+# ---- Coverage ----
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,7 @@
+# Default owners for everything in the repo
+*       @nishimaliknitj @rahulmalik-galgotias
+
+# Module-specific ownership
+/src/models/   @nishimaliknitj
+/src/datasets/ @rahulmalik-galgotias
+/docs/         @nishimaliknitj @rahulmalik-galgotias

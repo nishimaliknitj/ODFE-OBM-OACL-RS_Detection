@@ -1,0 +1,48 @@
+# =========================================================================
+# DOTA dataset configuration
+# =========================================================================
+_base_: "default.yaml"
+
+experiment:
+  name: "odfe_obm_oacl_dota"
+
+dataset:
+  name: "DOTA"
+  root: "data/DOTA"
+  train_images: "data/DOTA/train/images"
+  val_images: "data/DOTA/val/images"
+  train_annotations: "data/DOTA/train/labelTxt"
+  val_annotations: "data/DOTA/val/labelTxt"
+  num_classes: 15
+  class_names: [
+    "plane", "baseball-diamond", "bridge", "ground-track-field",
+    "small-vehicle", "large-vehicle", "ship", "tennis-court",
+    "basketball-court", "storage-tank", "soccer-ball-field", "roundabout",
+    "harbor", "swimming-pool", "helicopter"
+  ]
+  input_size: [640, 640]
+  patch_extraction:
+    enabled: true
+    patch_size: 640
+    overlap: 256
+    note: "High-res aerial images cropped into overlapping 640x640 patches."
+
+training:
+  epochs: 100
+  batch_size: 16
+  lr_decay_epochs: [50, 80]
+
+optimizer:
+  lr: 0.01
+  momentum: 0.937
+  weight_decay: 5.0e-4
+
+evaluation:
+  batch_size: 16
+
+inference:
+  input_size: [640, 640]
+
+reporting:
+  tail_categories: ["helicopter", "soccer-ball-field", "roundabout", "container-crane"]
+  head_categories: ["plane", "ship", "tennis-court", "large-vehicle"]

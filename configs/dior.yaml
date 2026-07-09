@@ -1,0 +1,49 @@
+# =========================================================================
+# DIOR dataset configuration
+# Inherits from default.yaml; only overrides / dataset-specific keys shown.
+# =========================================================================
+_base_: "default.yaml"
+
+experiment:
+  name: "odfe_obm_oacl_dior"
+
+dataset:
+  name: "DIOR"
+  root: "data/DIOR"
+  train_images: "data/DIOR/JPEGImages-train"
+  val_images: "data/DIOR/JPEGImages-test"
+  train_annotations: "data/DIOR/Annotations/train"
+  val_annotations: "data/DIOR/Annotations/test"
+  num_classes: 20
+  class_names: [
+    "airplane", "airport", "baseballfield", "basketballcourt", "bridge",
+    "chimney", "dam", "expressway-service-area", "expressway-toll-station",
+    "golffield", "groundtrackfield", "harbor", "overpass", "ship", "stadium",
+    "storagetank", "tenniscourt", "trainstation", "vehicle", "windmill"
+  ]
+  input_size: [640, 640]
+  sliding_window:
+    enabled: true
+    stride: 512
+    note: "Applied to source images natively larger than 800x800 before resize."
+
+training:
+  epochs: 100
+  batch_size: 16
+  lr_decay_epochs: [50, 80]
+
+optimizer:
+  lr: 0.01
+  momentum: 0.937
+  weight_decay: 5.0e-4
+
+evaluation:
+  batch_size: 16
+
+inference:
+  input_size: [640, 640]
+
+# Dataset-specific tail categories used for reporting / qualitative analysis
+reporting:
+  tail_categories: ["chimney", "dam", "trainstation", "overpass", "bridge"]
+  head_categories: ["airplane", "ship", "vehicle", "tenniscourt"]
