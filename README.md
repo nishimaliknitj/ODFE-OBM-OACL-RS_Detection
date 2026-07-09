@@ -189,8 +189,7 @@ If you use this code or find this work useful, please cite:
 @article{madaan2024odfeobmoacl,
   title   = {Optimization-Driven Feature Learning for Long-Tailed Object Detection in Optical Remote Sensing Imagery},
   author  = {Madaan, Nishi and Malik, Rahul and Upadhyay, Utsav and Kumar, Alok and Roy, Satyabrata and Rawat, Umashankar},
-  journal = {Preprint},
-  year    = {2024}
+
 }
 ```
 
@@ -206,7 +205,7 @@ This project is released under the [MIT License](LICENSE).
 
 ## Contact
 
-- Rahul Malik — Galgotias University — rahul.malik@galgotiasuniversity.edu.in
+- Rahul Malik — Galgotias University — malikvnit@gmail.com
 - Nishi Madaan — nishimaliknitj@gmail.com
 
 ## Acknowledgements
